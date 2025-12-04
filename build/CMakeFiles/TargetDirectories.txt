@@ -1,0 +1,3 @@
+C:/wamp64/www/IMAC/IMAC1/Prog_Algo/TicTacToe_IMAC/build/CMakeFiles/TicTacToe.dir
+C:/wamp64/www/IMAC/IMAC1/Prog_Algo/TicTacToe_IMAC/build/CMakeFiles/edit_cache.dir
+C:/wamp64/www/IMAC/IMAC1/Prog_Algo/TicTacToe_IMAC/build/CMakeFiles/rebuild_cache.dir

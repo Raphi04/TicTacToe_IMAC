@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/wamp64/www/IMAC/IMAC1/Prog_Algo/TicTacToe_IMAC/build",
+  "command": "C:\\Winlibs\\mingw64\\bin\\g++.exe  @CMakeFiles/TicTacToe.dir/includes_CXX.rsp -g -std=gnu++20 -Werror -Wall -Wextra -Wpedantic -pedantic-errors -Wimplicit-fallthrough -o CMakeFiles\\TicTacToe.dir\\src\\test.cpp.obj -c C:\\wamp64\\www\\IMAC\\IMAC1\\Prog_Algo\\TicTacToe_IMAC\\src\\test.cpp",
+  "file": "C:/wamp64/www/IMAC/IMAC1/Prog_Algo/TicTacToe_IMAC/src/test.cpp",
+  "output": "CMakeFiles/TicTacToe.dir/src/test.cpp.obj"
+}
+]

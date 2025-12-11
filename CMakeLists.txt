@@ -22,3 +22,13 @@ if(MSVC)
 else()
    target_compile_options(${PROJECT_NAME} PRIVATE -Werror -Wall -Wextra -Wpedantic -pedantic-errors -Wimplicit-fallthrough)
 endif()
+
+include(FetchContent)
+FetchContent_Declare(
+    terminal_ctrl
+    GIT_REPOSITORY https://github.com/dsmtE/terminal_ctrl
+    GIT_TAG "origin/main"
+)
+
+FetchContent_MakeAvailable(terminal_ctrl)
+target_link_libraries(${PROJECT_NAME} PUBLIC terminal_ctrl)

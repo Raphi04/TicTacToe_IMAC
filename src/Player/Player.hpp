@@ -7,4 +7,4 @@ struct Player {
     char symbole {};
 };
 
-Player create_player();
+std::pair<Player, Player> create_player();

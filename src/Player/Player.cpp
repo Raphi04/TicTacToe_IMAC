@@ -34,7 +34,7 @@ std::pair<Player, Player> create_player(bool with_ai) {
     std::string player_2_symbole {player_1_symbole == "X" ? "O" : "X"};
 
     Player player_1 = {player_1_name, player_1_symbole};
-    Player player_2 = {player_2_name, player_2_symbole};
+    Player player_2 = {player_2_name, player_2_symbole, true};
 
     return std::make_pair(player_1, player_2);
 }

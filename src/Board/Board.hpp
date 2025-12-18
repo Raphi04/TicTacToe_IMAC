@@ -1,5 +1,6 @@
 #pragma once
 
-#include <vector>
+#include <array>
+#include <string>
 
-void draw_game_board(std::vector<char> const&);
+void draw_game_board(std::array<std::string, 9> const&);

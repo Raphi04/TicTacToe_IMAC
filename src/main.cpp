@@ -33,17 +33,17 @@ int main() {
             terminal_ctrl::clear_screen();
             std::cout << "Veuillez choisir un mode de jeu valide !\n" << std::endl;
         } else {
-            break;
+            valid_gamemode = true;
         }
     }while(!valid_gamemode);
 
     if(selected_gamemode == 1) {
+        terminal_ctrl::clear_screen();
         player_vs_player();
     } else {
+        terminal_ctrl::clear_screen();
         player_vs_ia();
     }
-    // std::vector<char> board{'x','x','x','x','x','x','x','x','x'};
-    // draw_game_board(board);
-
+    
     return 0;
 }

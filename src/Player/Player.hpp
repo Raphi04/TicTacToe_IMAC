@@ -4,7 +4,7 @@
 
 struct Player {
     std::string name {};
-    char symbole {};
+    std::string symbole {};
 };
 
-std::pair<Player, Player> create_player();
+std::pair<Player, Player> create_player(bool with_ai);

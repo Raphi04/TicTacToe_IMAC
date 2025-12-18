@@ -6,7 +6,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
 #include <algorithm>
 
 #include "terminal_ctrl.hpp"
@@ -94,7 +93,7 @@ void player_vs_ia() {
         draw_game_board(board);
 
         if(player_playing->is_ai) {
-            ia_choosing_cell(board, player1, player2);
+            ai_choosing_cell(board, player1, player2);
         } else {
             check_valid_cell(board, *player_playing);
         }

@@ -12,7 +12,7 @@ int main() {
     terminal_ctrl::clear_screen();
 
     int selected_gamemode {};
-    std::array<int, 2> gamemode_selection = {1, 2};
+    std::array<int, 2> gamemode_selection {1, 2};
     bool valid_gamemode {false};
 
     std::cout << "Bienvenue dans ce morpion !\n" << std::endl;

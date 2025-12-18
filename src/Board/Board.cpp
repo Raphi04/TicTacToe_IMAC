@@ -9,7 +9,7 @@
 #include <ctime>
 
 void draw_game_board(std::array<std::string, 9> const& board) {
-   for(size_t i {0}; i < board.size(); i++ ) {
+    for(size_t i {0}; i < board.size(); i++ ) {
         std::string symbole = board[i];
         if(i % 3 == 0) {    
             std::cout << "| " << symbole << " | ";
@@ -49,7 +49,7 @@ void check_valid_cell(std::array<std::string, 9>& board, Player const& player_pl
     }while(!valid_cell_number);
 }
 
-void ia_choosing_cell(std::array<std::string, 9>& board, Player const& player_1,  Player const& player_2){
+void ai_choosing_cell(std::array<std::string, 9>& board, Player const& player_1,  Player const& player_2){
     std::vector<int> empty_board_cells {};
 
     //Détection des cases vides
@@ -80,27 +80,32 @@ void ia_choosing_cell(std::array<std::string, 9>& board, Player const& player_1,
     
     //Choix d'une case au hasard 
     std::srand(std::time(nullptr));
-    int const chosen_cell = std::rand() % empty_board_cells.size();
+    int const random_index = std::rand() % empty_board_cells.size();
+    int const chosen_cell {empty_board_cells[random_index]};
     board[chosen_cell] = player_2.symbole;
 }
 
 bool check_victory(std::array<std::string, 9> const& board, Player const& player_playing) {
+    //Horizontal
     for(int i {0}; i < 9; i+=3){
         if(board[i] == player_playing.symbole && board[i + 1] == player_playing.symbole && board[i + 2] == player_playing.symbole) {
             return true;
         }
     }
 
+    //Vertical
     for(int i {0}; i < 3; i++){
         if(board[i] == player_playing.symbole && board[i + 3] == player_playing.symbole && board[i + 6] == player_playing.symbole) {
             return true;
         }
     }
 
+    //Diagonale haute vers le bas
     if(board[0] == player_playing.symbole && board[4] == player_playing.symbole && board[8] == player_playing.symbole) {
         return true;
     }
 
+    //Diagonale basse vers le haut
     if(board[6] == player_playing.symbole && board[4] == player_playing.symbole && board[2] == player_playing.symbole) {
         return true;
     }

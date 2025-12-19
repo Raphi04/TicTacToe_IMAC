@@ -1,5 +1,5 @@
 #pragma once
 
 void player_vs_player();
-void player_vs_ia();
+void player_vs_ai();
 

@@ -42,7 +42,7 @@ int main() {
         player_vs_player();
     } else {
         terminal_ctrl::clear_screen();
-        player_vs_ia();
+        player_vs_ai();
     }
     
     return 0;

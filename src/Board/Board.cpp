@@ -9,8 +9,17 @@
 #include <ctime>
 
 void draw_game_board(std::array<std::string, 9> const& board) {
+    std::string symbole {};
+
     for(size_t i {0}; i < board.size(); i++ ) {
-        std::string symbole = board[i];
+        if(board[i] == "X") {
+            symbole = "\033[0;38;2;255;0;0;49m" + board[i] + "\033[0m";
+        } else if(board[i] == "O") {
+            symbole = "\033[0;38;2;0;0;255;49m" + board[i] + "\033[0m";
+        } else {
+            symbole = board[i];
+        }
+
         if(i % 3 == 0) {    
             std::cout << "| " << symbole << " | ";
         } else if (i % 3 == 1) {
